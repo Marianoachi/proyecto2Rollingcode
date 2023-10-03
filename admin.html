@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="crud de productos con vanilla js">
+    <meta name="keywords" content="vanilla js, crud">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Practica CRUD</title>
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CRUD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active"  href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="admin.html">Admin</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="my-5">
+            <h1 class="display-3 text-center text-primary">
+                Administrar Productos
+            </h1>
+    <hr>
+    <form id="formProductos">
+        <div class="mb-3">
+            <label for="codigo" class="form-label">Codigo</label>
+            <input type="text" class="form-control" id="codigo" placeholder="2333" maxlength="4"  required>
+            <div  class="invalid-feedback">
+                Debe ingresar un codigo alfanumerico
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="producto" class="form-label">Producto</label>
+            <input type="text" class="form-control" id="producto" placeholder="Ej: Ironman" maxlength="30" required>
+            <div class="invalid-feedback">
+                Please choose a username.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripcion</label>
+            <textarea class="form-control" id="description" rows="3" maxlength="50" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="text" class="form-control" id="cantidad" placeholder="2" maxlength="3" required>
+            <div  class="invalid-feedback">
+                Debe ingresar un codigo alfanumerico
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="URL" class="form-label">URL</label>
+            <input type="text" class="form-control" id="URL" placeholder="http//127.0.01:800/image.jpg" maxlength="200" required>
+            <div  class="invalid-feedback">
+                Debe ingresar un codigo alfanumerico
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
+        <div class="alert alert-danger my-3 d-none" role="alert" id="mjeAlerta">
+            Debe completar todos los campos requeridos
+        </div>
+        
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="JS/admin.js" type="module"></script>
+</body>
+</html>
